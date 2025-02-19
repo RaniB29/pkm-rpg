@@ -90,5 +90,6 @@ speakMessage("Joy", "So, your $playerPokemonList[0], {$playerPokemonList[1]}, {$
 
 speakMessage("Joy", "You have a nice {$newPokemonList[0][$nameIndex]}, it number is {$newPokemonList[0][$numberIndex]}");
 speakMessage("Joy", "You have a nice {$newPokemonList[1][$nameIndex]}, it number is {$newPokemonList[1][$numberIndex]}");
+//speakMessage("Joy", "You have a nice {$charmanderInfo[$nameIndex]}, it number is {$charmanderInfo[$numberIndex]}");
 speakMessage("Joy", "You have a nice {$newPokemonList[2]['name']}, it number is {$newPokemonList[2]['number']}");
 //speakMessage("Joy", "You have a nice {$squirtleInfo['name']}, it number is {$squirtleInfo['number']}");
