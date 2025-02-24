@@ -10,32 +10,18 @@ define('POKEBALL_LIMIT', 6);
 $playerName = $argv[1];
 $pokeballNumber = $argv[2];
 
-$playerPokemonList = [
-    "Bulbassaur",
-    "Charmander",
-    "Squirtle",
-    "Pikachu",
-    "Eevee",
-    "Jigglypuff"
-];
-
-$nameIndex = 0;
-$typeIndex = 1;
-$numberIndex = 2;
-$evolutionIndex = 3;
-
 $bulbassaurInfo = [
-    $nameIndex => "Bulbassaur",
-    $typeIndex => "grass/poison",
-    $numberIndex => 1,
-    $evolutionIndex => 1
+    "name" => "Bulbassaur",
+    "type" => "grass/poison",
+    "number" => 1,
+    "evolution" => 1
 ];
 
 $charmanderInfo = [
-    $nameIndex => "Charmander",
-    $typeIndex => "fire",
-    $numberIndex => 4,
-    $evolutionIndex => 1
+    "name" => "Charmander",
+    "type" => "fire",
+    "number" => 4,
+    "evolution" => 1
 ];
 
 $squirtleInfo = [
@@ -45,10 +31,27 @@ $squirtleInfo = [
     "evolution" => 1
 ];
 
-$newPokemonList = [
+$pokemonList = [
     $bulbassaurInfo,
     $charmanderInfo,
-    $squirtleInfo
+    $squirtleInfo,
+    $bulbassaurInfo,
+    $charmanderInfo,
+    $squirtleInfo,
+    $bulbassaurInfo,
+    $charmanderInfo,
+    $squirtleInfo,
+    $squirtleInfo,
+    $bulbassaurInfo,
+    $charmanderInfo,
+    $squirtleInfo,
+    $bulbassaurInfo,
+    $charmanderInfo,
+    $squirtleInfo,
+    $bulbassaurInfo,
+    $charmanderInfo,
+    $squirtleInfo,
+    $squirtleInfo,
 ];
 
 function colorir($message)
@@ -67,29 +70,25 @@ function speakMessage($character, $message)
 
 speakMessage("Joy", "Welcome to Pallete Pokemon Center");
 
-if ($playerName == null) 
+if($playerName == null) 
 {
     speakMessage("Joy", "Sorry, would you please tell me your name?");
     exit;
 }
 
-if ($pokeballNumber == null)
+if($pokeballNumber == null)
 {
     speakMessage("Joy", "Hi there {$playerName} I need your pokeballs");
     exit;
 }
 
-if ($pokeballNumber > POKEBALL_LIMIT) 
+if($pokeballNumber > POKEBALL_LIMIT) 
 {
     speakMessage("Joy", "Sorry dear, I only can heal 6 Pokemon at time and you gave me {$pokeballNumber} pokemon");
     exit;
 }
 
-speakMessage("Joy", "Great {$playerName}! I will heal your {$pokeballNumber} Pokemons.");
-speakMessage("Joy", "So, your $playerPokemonList[0], {$playerPokemonList[1]}, {$playerPokemonList[2]}, {$playerPokemonList[3]}, {$playerPokemonList[4]} and {$playerPokemonList[5]} has been healed");
-
-speakMessage("Joy", "You have a nice {$newPokemonList[0][$nameIndex]}, it number is {$newPokemonList[0][$numberIndex]}");
-speakMessage("Joy", "You have a nice {$newPokemonList[1][$nameIndex]}, it number is {$newPokemonList[1][$numberIndex]}");
-//speakMessage("Joy", "You have a nice {$charmanderInfo[$nameIndex]}, it number is {$charmanderInfo[$numberIndex]}");
-speakMessage("Joy", "You have a nice {$newPokemonList[2]['name']}, it number is {$newPokemonList[2]['number']}");
-//speakMessage("Joy", "You have a nice {$squirtleInfo['name']}, it number is {$squirtleInfo['number']}");
+for($pokeIndex = 0;$pokeIndex < count($pokemonList);$pokeIndex = $pokeIndex + 1)
+{
+    speakMessage("Joy","I will heal your {$pokemonList[$pokeIndex]['type']}");
+};
