@@ -10,65 +10,17 @@ define('POKEBALL_LIMIT', 6);
 $playerName = $argv[1];
 $pokeballNumber = $argv[2];
 
-$bulbassaurInfo = [
-    "name" => "Bulbassaur",
-    "type" => "grass/poison",
-    "number" => 1,
-    "evolution" => 1
-];
-
-$charmanderInfo = [
-    "name" => "Charmander",
-    "type" => "fire",
-    "number" => 4,
-    "evolution" => 1
-];
-
-$squirtleInfo = [
-    "name" => "Squirtle",
-    "type" => "water",
-    "number" => 7,
-    "evolution" => 1
-];
-
-$pokemonList = [
-    $bulbassaurInfo,
-    $charmanderInfo,
-    $squirtleInfo,
-    $bulbassaurInfo,
-    $charmanderInfo,
-    $squirtleInfo,
-    $bulbassaurInfo,
-    $charmanderInfo,
-    $squirtleInfo,
-    $squirtleInfo,
-    $bulbassaurInfo,
-    $charmanderInfo,
-    $squirtleInfo,
-    $bulbassaurInfo,
-    $charmanderInfo,
-    $squirtleInfo,
-    $bulbassaurInfo,
-    $charmanderInfo,
-    $squirtleInfo,
-    $squirtleInfo,
-];
-
-function colorir($message)
-{
-    echo "\e[33m{$message}\e[0m";
-}
-
-/**
- * Show a message from a given character 
-*/
-function speakMessage($character, $message)
-{
-    colorir($character);
-    echo " > {$message}\n";
-}
+//requisitando outros scripts.
+require("./pokemonData.php");
+require("./utils.php");
 
 speakMessage("Joy", "Welcome to Pallete Pokemon Center");
+
+if($pokemonList == null)
+{
+    speakMessage("Joy", "Sorry! We are without data access at the moment!");
+    exit;
+}
 
 if($playerName == null) 
 {
