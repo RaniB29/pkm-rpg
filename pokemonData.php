@@ -24,6 +24,7 @@ $instance2->evolution = 2;
 echo "The pokemon's name is {$instance->name}\n";
 echo "The pokemon's name is {$instance2->name}\n";
 
+//criando objetos da classe PokeInfo
 $bulbassaurInfo = new PokeInfo();
 $bulbassaurInfo->name = "Bulbassaur";
 $bulbassaurInfo->type = "grass/poison";
@@ -36,6 +37,13 @@ $charmanderInfo->type = "fire";
 $charmanderInfo->number = 4;
 $charmanderInfo->evolution = 1;
 
+$squirtleInfo = new PokeInfo();
+$squirtleInfo->name = "Squirtle";
+$squirtleInfo->type = "water";
+$squirtleInfo->number = 7;
+$squirtleInfo->evolution = 1;
+
+/* criando um array associativo
 $charmanderInfo = [
     "name" => "Charmander",
     "type" => "fire",
@@ -48,7 +56,7 @@ $squirtleInfo = [
     "type" => "water",
     "number" => 7,
     "evolution" => 1
-];
+];*/
 
 $pokemonList = [
     $bulbassaurInfo,
