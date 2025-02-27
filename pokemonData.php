@@ -36,39 +36,14 @@ $charmanderInfo->type = "fire";
 $charmanderInfo->number = 4;
 $charmanderInfo->evolution = 1;
 
-$charmanderInfo = [
-    "name" => "Charmander",
-    "type" => "fire",
-    "number" => 4,
-    "evolution" => 1
-];
-
-$squirtleInfo = [
-    "name" => "Squirtle",
-    "type" => "water",
-    "number" => 7,
-    "evolution" => 1
-];
+$squirtleInfo = new PokeInfo();
+$squirtleInfo->name = "Squirtle";
+$squirtleInfo->type = "water";
+$squirtleInfo->number = 7;
+$squirtleInfo->evolution = 1;
 
 $pokemonList = [
     $bulbassaurInfo,
     $charmanderInfo,
-    $squirtleInfo,
-    $bulbassaurInfo,
-    $charmanderInfo,
-    $squirtleInfo,
-    $bulbassaurInfo,
-    $charmanderInfo,
-    $squirtleInfo,
-    $squirtleInfo,
-    $bulbassaurInfo,
-    $charmanderInfo,
-    $squirtleInfo,
-    $bulbassaurInfo,
-    $charmanderInfo,
-    $squirtleInfo,
-    $bulbassaurInfo,
-    $charmanderInfo,
-    $squirtleInfo,
     $squirtleInfo,
 ];
