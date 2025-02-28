@@ -42,5 +42,5 @@ if($pokeballNumber > POKEBALL_LIMIT)
 
 for($pokeIndex = 0;$pokeIndex < count($pokemonList);$pokeIndex = $pokeIndex + 1)
 {
-    speakMessage("Joy","I will heal your {$pokemonList[$pokeIndex]['type']}");
+    speakMessage("Joy","I will heal your {$pokemonList[$pokeIndex]->name}");
 };
