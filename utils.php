@@ -1,15 +1,21 @@
 <?php
 
-function colorir($message)
+function colorir(string $message) : void
 {
-    echo "\e[33m{$message}\e[0m";
+    $color = greencolor();
+    echo "\e[{$color}m {$message}\e[0m";
 }
 
 /**
  * Show a message from a given character 
 */
-function speakMessage($character, $message)
+function speakMessage(string $character, string $message) : void
 {
     colorir($character);
     echo " > {$message}\n";
+}
+
+function greencolor() : string
+{
+    return 32;
 }
