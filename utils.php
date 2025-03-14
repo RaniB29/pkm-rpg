@@ -11,11 +11,17 @@ function colorir(string $message) : void
 */
 function speakMessage(string $character, string $message) : void
 {
-    colorir($character);
+    colorir(completeName($character, "Silva"));
     echo " > {$message}\n";
 }
+
 
 function greencolor() : string
 {
     return 32;
+}
+
+function completeName(string $name, string $lastname) : string 
+{
+    return $name . $lastname; 
 }
