@@ -11,8 +11,8 @@ $playerName = $argv[1];
 $pokeballNumber = $argv[2];
 
 //requisitando outros scripts.
-require("./pokemonData.php");
-require("./utils.php");
+require_once("./pokemonData.php");
+require_once("./utils.php");
 
 speakMessage("Joy", "Welcome to Pallete Pokemon Center");
 
