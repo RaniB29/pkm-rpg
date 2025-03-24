@@ -19,8 +19,25 @@ class PokeInfo
         if($nickname == "") {
             throw new Exception("You cannot insert a empty string value to nickName.");
         }
-        $this->nickname = strtoupper($nickname);
-        //strtolower
+        /*  ucfirst — Make a string's first character uppercase
+            ucwords — Uppercase the first character of each word in a string
+            -------
+            Primeiro tentei assim
+            $this->nickname = strtolower($nickname);
+            $this->nickname = ucfirst($nickname);
+
+            Dessa forma estava dando errado, porque eu estava alterando apenas o parâmetro da variável local
+            nickname.
+            Para funcionar eu precisei inserir um this para indicar o valor que estava guardado na variável 
+            já com alteração. */
+        
+        //solução 1
+            $this->nickname = strtolower($nickname);
+            $this->nickname = ucfirst($this->nickname);
+
+        //solução 2
+         //   $nickname = strtolower($nickname);
+         //   $this->nickname = ucfirst($nickname);   
     }
 
     public function getNickname() {
