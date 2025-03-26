@@ -2,26 +2,13 @@
 require_once("./PokeInfo.php");
 
 //criando objetos da classe PokeInfo
-$bulbassaurInfo = new PokeInfo();
-$bulbassaurInfo->name = "Bulbassaur";
-$bulbassaurInfo->type = "grass/poison";
-$bulbassaurInfo->number = 1;
-$bulbassaurInfo->evolution = 1;
-
-$charmanderInfo = new PokeInfo();
-$charmanderInfo->name = "Charmander";
-$charmanderInfo->type = "fire";
-$charmanderInfo->number = 4;
-$charmanderInfo->evolution = 1;
-
-$squirtleInfo = new PokeInfo();
-$squirtleInfo->name = "Squirtle";
-$squirtleInfo->type = "water";
-$squirtleInfo->number = 7;
-$squirtleInfo->evolution = 1;
 
 $pokemonList = [
-    $bulbassaurInfo,
-    $charmanderInfo,
-    $squirtleInfo,
+    new PokeInfo("Bulbassaur", "grass/poison", 1, 1),
+    new PokeInfo("Charmander", "fire", 4, 1),
+    new PokeInfo("Squirtle", "water", 7, 1)
 ];
+
+$pokemonList[0]->setNickname("VERDE");
+echo $pokemonList[0]->getNickname();
+die;
