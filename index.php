@@ -11,8 +11,16 @@ $playerName = $argv[1];
 $pokeballNumber = $argv[2];
 
 //requisitando outros scripts.
-require("./pokemonData.php");
-require("./utils.php");
+require_once("./pokemonData.php");
+require_once("./utils.php");
+require_once("./PokeInfo.php");
+
+$pikachuInfo = new PokeInfo();
+$pikachuInfo->name = "Pikachu";
+$pikachuInfo->type = "eletric";
+$pikachuInfo->number = 25;
+$pikachuInfo->evolution = 2;
+$pokemonList[count($pokemonList)] = $pikachuInfo;
 
 speakMessage("Joy", "Welcome to Pallete Pokemon Center");
 

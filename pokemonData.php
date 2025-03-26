@@ -1,28 +1,5 @@
 <?php
-
-class PokeInfo
-{
-    public $name;
-    public $type;
-    public $number;
-    public $evolution;
-}
-
-$instance = new PokeInfo();
-$instance->name = "gilberto";
-$instance->type = "grass/posion";
-$instance->number = 2;
-$instance->evolution = 2;
-
-$instance2 = new PokeInfo();
-$instance2->name = "mary";
-$instance2->type = "grass/posion";
-$instance2->number = 2;
-$instance2->evolution = 2;
-
-//var_dump($instance->name);
-echo "The pokemon's name is {$instance->name}\n";
-echo "The pokemon's name is {$instance2->name}\n";
+require_once("./PokeInfo.php");
 
 //criando objetos da classe PokeInfo
 $bulbassaurInfo = new PokeInfo();
@@ -43,40 +20,8 @@ $squirtleInfo->type = "water";
 $squirtleInfo->number = 7;
 $squirtleInfo->evolution = 1;
 
-/* criando um array associativo
-$charmanderInfo = [
-    "name" => "Charmander",
-    "type" => "fire",
-    "number" => 4,
-    "evolution" => 1
-];
-
-$squirtleInfo = [
-    "name" => "Squirtle",
-    "type" => "water",
-    "number" => 7,
-    "evolution" => 1
-];*/
-
 $pokemonList = [
     $bulbassaurInfo,
     $charmanderInfo,
-    $squirtleInfo,
-    $bulbassaurInfo,
-    $charmanderInfo,
-    $squirtleInfo,
-    $bulbassaurInfo,
-    $charmanderInfo,
-    $squirtleInfo,
-    $squirtleInfo,
-    $bulbassaurInfo,
-    $charmanderInfo,
-    $squirtleInfo,
-    $bulbassaurInfo,
-    $charmanderInfo,
-    $squirtleInfo,
-    $bulbassaurInfo,
-    $charmanderInfo,
-    $squirtleInfo,
     $squirtleInfo,
 ];
