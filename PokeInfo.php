@@ -28,4 +28,7 @@ class PokeInfo
     public function getNickname() {
         return $this->nickname;            
     }
+    public function getName(){
+        return $this->name;
+    }
 }

@@ -13,34 +13,32 @@ $pokeballNumber = $argv[2];
 //requisitando outros scripts.
 require_once("./pokemonData.php");
 require_once("./utils.php");
+require_once("./PokemonCenter.php");
+require_once("./BackBag.php");
+require_once("./Jogador.php");
+$pokemonCenter = new PokemonCenter();
+$pokemonCenter->healPokemon($playerName,$pokeballNumber,$pokemonList);
 
-speakMessage("Joy", "Welcome to Pallete Pokemon Center");
+// Cria uma mochila e adiciona alguns itens
+$mochila = new BackBag("padrão");
+$mochila->addPocket("Potion");
+$mochila->addPocket("Super Potion");
+$mochila->addPocket("Hiper Potion");
+// Cria um jogador com nome e mochila
+$player = new Jogador($playerName, $mochila);
 
-if($pokemonList == null)
-{
-    speakMessage("Joy", "Sorry! We are without data access at the moment!");
-    exit;
+// Exibe o nome do jogador e os itens da mochila
+speakMessage("Joy", "Jogador: " . $player->getNome());
+speakMessage("Joy", "Mochila tipo: " . $player->getBackBag()->tipo);
+speakMessage("Joy", "Itens na mochila:");
+
+foreach ($player->getBackBag()->listPockets() as $item) {
+    speakMessage("Joy", "- $item");
 }
 
-if($playerName == null) 
-{
-    speakMessage("Joy", "Sorry, would you please tell me your name?");
-    exit;
-}
+// Instancia o centro Pokémon e executa o método de cura
+$pokemonCenter = new PokemonCenter();
+$pokemonCenter->healPokemon($playerName, $pokeballNumber, $pokemonList);
 
-if($pokeballNumber == null)
-{
-    speakMessage("Joy", "Hi there {$playerName} I need your pokeballs");
-    exit;
-}
 
-if($pokeballNumber > POKEBALL_LIMIT) 
-{
-    speakMessage("Joy", "Sorry dear, I only can heal 6 Pokemon at time and you gave me {$pokeballNumber} pokemon");
-    exit;
-}
-
-for($pokeIndex = 0;$pokeIndex < count($pokemonList);$pokeIndex = $pokeIndex + 1)
-{
-    speakMessage("Joy","I will heal your {$pokemonList[$pokeIndex]->name}");
-};
+//var_dump($pokemonCenter);
