@@ -14,27 +14,44 @@ $pokeballNumber = $argv[2];
 require_once("./pokemonData.php");
 require_once("./utils.php");
 require_once("./PokemonCenter.php");
-require_once("./BackBag.php");
-require_once("./Jogador.php");
+require_once("./Backpack.php");
+require_once("./Player.php");
+require_once("./Pokeball.php");
+require_once("./Pokemon.php");
+
+$pocket = [
+    "Potion",
+    "Revive",
+    "Super potion",
+    new Pokeball("greatball") 
+];
+
+$backpack = new Backpack($pocket);
+$player = new Player($playerName, $backpack);
+$player->backpack->pocket[3]->setPokemon(new Pokemon("pikachu", "Gilberto", 12,["quickattack", "thunder", "scratch", "tailwhip"]));
+
+var_dump($player->backpack->pocket[3]->type);
+var_dump($player->backpack->pocket[3]->pokemon);
+
 $pokemonCenter = new PokemonCenter();
 $pokemonCenter->healPokemon($playerName,$pokeballNumber,$pokemonList);
 
 // Cria uma mochila e adiciona alguns itens
-$mochila = new BackBag("padrão");
-$mochila->addPocket("Potion");
-$mochila->addPocket("Super Potion");
-$mochila->addPocket("Hiper Potion");
+//$mochila = new BackBag("padrão");
+//$mochila->addPocket("Potion");
+//$mochila->addPocket("Super Potion");
+//$mochila->addPocket("Hiper Potion");
 // Cria um jogador com nome e mochila
-$player = new Jogador($playerName, $mochila);
+//$player = new Jogador($playerName, $mochila);
 
 // Exibe o nome do jogador e os itens da mochila
-speakMessage("Joy", "Jogador: " . $player->getNome());
-speakMessage("Joy", "Mochila tipo: " . $player->getBackBag()->tipo);
-speakMessage("Joy", "Itens na mochila:");
+//speakMessage("Joy", "Jogador: " . $player->getNome());
+//speakMessage("Joy", "Mochila tipo: " . $player->getBackBag()->tipo);
+//speakMessage("Joy", "Itens na mochila:");
 
-foreach ($player->getBackBag()->listPockets() as $item) {
-    speakMessage("Joy", "- $item");
-}
+//foreach ($player->getBackBag()->listPockets() as $item) {
+//    speakMessage("Joy", "- $item");
+//}
 
 // Instancia o centro Pokémon e executa o método de cura
 $pokemonCenter = new PokemonCenter();
