@@ -1,5 +1,4 @@
 <?php
-require_once("./PokeInfo.php");
 
 $pokemonList = [
     new PokeInfo("Bulbassaur", "grass/poison", 1, 1),

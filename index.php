@@ -11,13 +11,14 @@ $playerName = $argv[1];
 $pokeballNumber = $argv[2];
 
 //requisitando outros scripts.
+require_once("./Application/Model/Entity/PokemonCenter.php");
+require_once("./Application/Model/Entity/Backpack.php");
+require_once("./Application/Model/Entity/Player.php");
+require_once("./Application/Model/Entity/Pokeball.php");
+require_once("./Application/Model/Entity/Pokemon.php");
+require_once("./Application/Model/Entity/PokeInfo.php");
 require_once("./pokemonData.php");
 require_once("./utils.php");
-require_once("./PokemonCenter.php");
-require_once("./Backpack.php");
-require_once("./Player.php");
-require_once("./Pokeball.php");
-require_once("./Pokemon.php");
 
 $pocket = [
     "Potion",
