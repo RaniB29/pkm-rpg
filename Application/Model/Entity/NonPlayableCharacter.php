@@ -2,12 +2,12 @@
 
 class NonPlayableCharacter
 {
-    private $name;
-    private $role;
+    public $name;
+    public $role;
 
     public function __construct(string $name, string $role)
     {
-        $this->
-        $this->
+        $this->name = $name;
+        $this->role = $role;
     }
 }

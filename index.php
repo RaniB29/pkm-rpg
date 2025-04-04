@@ -19,7 +19,8 @@ $pocket = [
     new Pokeball("greatball") 
 ];
 
-$Npc = new NonPlayableCharacter("Joy", "To heal");
+$trainer = new Trainer($playerName, new Backpack($pocket));
+$npc = new NonPlayableCharacter("Jabulani", "To heal");
 
 $pokemonCenter = new PokemonCenter();
-$pokemonCenter->healPokemon($playerName, $pokeballNumber, $pokemonList, $Npc);
+$pokemonCenter->healPokemon($trainer, $pokeballNumber, $pokemonList, $npc);

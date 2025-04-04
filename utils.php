@@ -9,9 +9,9 @@ function colorir(string $message) : void
 /**
  * Show a message from a given character 
 */
-function speakMessage(string $character, string $message) : void
+function speakMessage(string $characterName, string $message) : void
 {
-    colorir(completeName($character, "Silva"));
+    colorir($characterName);
     echo " > {$message}\n";
 }
 
