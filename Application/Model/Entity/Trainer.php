@@ -1,6 +1,6 @@
 <?php
 
-class Player
+class Trainer
 {
     public string $name;
     public Backpack $backpack;

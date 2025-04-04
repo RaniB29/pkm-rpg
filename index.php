@@ -19,5 +19,7 @@ $pocket = [
     new Pokeball("greatball") 
 ];
 
+$Npc = new NonPlayableCharacter("Joy", "To heal");
+
 $pokemonCenter = new PokemonCenter();
-$pokemonCenter->healPokemon($playerName,$pokeballNumber,$pokemonList);
+$pokemonCenter->healPokemon($playerName, $pokeballNumber, $pokemonList, $Npc);

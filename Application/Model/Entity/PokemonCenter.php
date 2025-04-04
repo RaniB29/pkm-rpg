@@ -4,7 +4,7 @@ require_once("./utils.php");
 
 class PokemonCenter
 {
-    public function healPokemon($playerName, $pokeballNumber, $pokemonList)
+    public function healPokemon($playerName, $pokeballNumber, $pokemonList, $Npc)
     {
         speakMessage("Joy", "Welcome to Pallete Pokemon Center");
 
