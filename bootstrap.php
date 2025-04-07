@@ -9,3 +9,5 @@ require_once("./Application/Model/Entity/PokeInfo.php");
 require_once("./Application/Model/Entity/NonPlayableCharacter.php");
 require_once("./pokemonData.php");
 require_once("./utils.php");
+require_once("./Application/Model/Entity/ConsumableItem.php");
+
