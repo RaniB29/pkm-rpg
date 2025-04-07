@@ -11,7 +11,6 @@ $playerName = $argv[1];
 $pokeballNumber = $argv[2];
 
 require_once("./bootstrap.php");
-//require_once("/home/alanraniel/projects/mpl/pkm-rpg/bootstrap.php");
 
 $pocket = [
     new ConsumableItem("potion", "heal pokemon's 20 HP",false), 
@@ -22,7 +21,7 @@ $pocket = [
 
 $trainer = new Trainer($playerName, new Backpack($pocket));
 $npc = new NonPlayableCharacter("Jabulani", "To heal");
-$pocket[0]->useItem($npc->name, $playerName, true);
+$pocket[0]->useItem();
 
 $pokemonCenter = new PokemonCenter();
 $pokemonCenter->healPokemon($trainer, $pokeballNumber, $pokemonList, $npc);

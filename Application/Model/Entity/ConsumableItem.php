@@ -13,14 +13,9 @@ class ConsumableItem
         $this->used = $used;
     }
 
-    public function useItem(string $speaker, string $trainerOwn, bool $status) 
+    public function useItem() 
     {
-        $this->used = $status;
-        require_once("./utils.php");
-        if($this->used == true)
-        {
-            colorir($speaker);
-            echo " > Dear trainer {$trainerOwn}, your {$this->name} item has been used.\n";
-        }
+        $this->used = true;
+        SystemUtils::speakmessage("","Your {$this->name} item has been used.\n");
     }
 }
