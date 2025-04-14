@@ -1,0 +1,16 @@
+{
+    "name": "mpl/pkm-rpg",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "PkmRpg\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Alan Raniel",
+            "email": "raniel29c@gmail.com"
+        }
+    ],
+    "require": {}
+}

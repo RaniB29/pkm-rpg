@@ -1,5 +1,7 @@
 <?php
 
+namespace PkmRpg\Application;
+
 class SystemUtils
 {
     static function colorir(string $message) : void

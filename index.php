@@ -11,6 +11,12 @@ $playerName = $argv[1];
 $pokeballNumber = $argv[2];
 
 require_once("./bootstrap.php");
+use PkmRpg\Application\Model\Entity\ConsumableItem;
+use PkmRpg\Application\Model\Entity\Pokeball;
+use PkmRpg\Application\Model\Entity\Trainer;
+use PkmRpg\Application\Model\Entity\Backpack;
+use PkmRpg\Application\Model\Entity\NonPlayableCharacter;
+use PkmRpg\Application\Model\Entity\PokemonCenter;
 
 $pocket = [
     new ConsumableItem("potion", "heal pokemon's 20 HP",false), 

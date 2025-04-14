@@ -1,5 +1,7 @@
 <?php
 
+namespace PkmRpg\Application\Model\Entity;
+
 class Pokeball extends ConsumableItem
 {
     public string $type;

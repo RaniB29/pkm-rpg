@@ -1,5 +1,7 @@
 <?php
 
+use PkmRpg\Application\Model\Entity\PokeInfo;
+
 $pokemonList = [
     new PokeInfo("Bulbassaur", "grass/poison", 1, 1),
     new PokeInfo("Charmander", "fire", 4, 1),

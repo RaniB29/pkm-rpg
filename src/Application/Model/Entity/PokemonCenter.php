@@ -1,5 +1,9 @@
 <?php
 
+namespace PkmRpg\Application\Model\Entity;
+
+use PkmRpg\Application\SystemUtils;
+
 class PokemonCenter
 {
     public function healPokemon(Trainer $trainer, int $pokeballNumber, array $pokemonList, NonPlayableCharacter $npc)

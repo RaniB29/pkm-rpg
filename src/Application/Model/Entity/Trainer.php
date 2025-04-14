@@ -1,5 +1,7 @@
 <?php
 
+namespace PkmRpg\Application\Model\Entity;
+
 class Trainer
 {
     public string $name;

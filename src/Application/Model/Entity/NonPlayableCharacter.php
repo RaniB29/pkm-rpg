@@ -1,5 +1,9 @@
 <?php
 
+namespace PkmRpg\Application\Model\Entity;
+
+namespace PkmRpg\Application\Model\Entity;
+
 class NonPlayableCharacter
 {
     public $name;

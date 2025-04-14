@@ -1,5 +1,9 @@
 <?php
 
+namespace PkmRpg\Application\Model\Entity;
+
+use PkmRpg\Application\SystemUtils;
+
 class ConsumableItem
 {
     private $name;
