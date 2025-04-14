@@ -21,7 +21,8 @@ $pocket = [
 
 $trainer = new Trainer($playerName, new Backpack($pocket));
 $npc = new NonPlayableCharacter("Jabulani", "To heal");
-$pocket[0]->useItem();
+$pocket[3]->getPurpose();
+$pocket[3]->useItem();
 
 $pokemonCenter = new PokemonCenter();
 $pokemonCenter->healPokemon($trainer, $pokeballNumber, $pokemonList, $npc);

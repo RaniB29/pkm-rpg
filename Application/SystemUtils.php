@@ -11,7 +11,7 @@ class SystemUtils
     /**
      * Show a message from a given character 
     */
-    static function speakMessage(string $characterName, string $message) : void
+    static public function speakMessage(string $characterName, string $message) : void
     {
         self::colorir($characterName);
         echo " > {$message}\n";

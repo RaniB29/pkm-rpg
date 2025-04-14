@@ -18,4 +18,9 @@ class ConsumableItem
         $this->used = true;
         SystemUtils::speakmessage("","Your {$this->name} item has been used.\n");
     }
+    
+    public function getPurpose()
+    {
+        SystemUtils::speakmessage("",$this->purpose);
+    }
 }
