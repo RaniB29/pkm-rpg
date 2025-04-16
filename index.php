@@ -17,6 +17,7 @@ use PkmRpg\Application\Model\Entity\Trainer;
 use PkmRpg\Application\Model\Entity\Backpack;
 use PkmRpg\Application\Model\Entity\NonPlayableCharacter;
 use PkmRpg\Application\Model\Entity\PokemonCenter;
+use PkmRpg\Application\Controller\GameLoop;
 
 $pocket = [
     new ConsumableItem("potion", "heal pokemon's 20 HP",false), 
@@ -30,5 +31,7 @@ $npc = new NonPlayableCharacter("Jabulani", "To heal");
 $pocket[3]->getPurpose();
 $pocket[3]->useItem();
 
-$pokemonCenter = new PokemonCenter();
-$pokemonCenter->healPokemon($trainer, $pokeballNumber, $pokemonList, $npc);
+//$pokemonCenter = new PokemonCenter();
+//$pokemonCenter->healPokemon($trainer, $pokeballNumber, $pokemonList, $npc);
+$gameLoop = new GameLoop();
+$gameLoop->run($trainer);

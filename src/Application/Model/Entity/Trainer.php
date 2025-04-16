@@ -2,14 +2,14 @@
 
 namespace PkmRpg\Application\Model\Entity;
 
-class Trainer
+class Trainer extends Character
 {
-    public string $name;
     public Backpack $backpack;
 
     public function __construct(string $name, Backpack $backpack)
     {
-        $this->name = $name;
+    //  $this->name = $name;
+        parent::__construct($name);
         $this->backpack = $backpack;
     }
 

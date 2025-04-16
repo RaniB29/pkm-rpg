@@ -20,11 +20,11 @@ class ConsumableItem
     public function useItem() 
     {
         $this->used = true;
-        SystemUtils::speakmessage("","Your {$this->name} item has been used.\n");
+        SystemUtils::speakmessage("Your {$this->name} item has been used.");
     }
     
     public function getPurpose()
     {
-        SystemUtils::speakmessage("",$this->purpose);
+        SystemUtils::speakmessage($this->purpose);
     }
 }

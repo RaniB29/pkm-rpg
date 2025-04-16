@@ -2,6 +2,8 @@
 
 namespace PkmRpg\Application;
 
+use PkmRpg\Application\Model\Entity\Character;
+
 class SystemUtils
 {
     static function colorir(string $message) : void
@@ -13,9 +15,11 @@ class SystemUtils
     /**
      * Show a message from a given character 
     */
-    static public function speakMessage(string $characterName, string $message) : void
+    static public function speakMessage(string $message, ?Character $characterName = null) : void
     {
-        self::colorir($characterName);
+        if($characterName != null)
+            self::colorir($characterName);
+        
         echo " > {$message}\n";
     }
 
